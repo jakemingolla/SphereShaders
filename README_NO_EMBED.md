@@ -27,7 +27,7 @@ For a full understanding of how the transformations are applied, the file data/s
 
 
 ### Screenshots
-# NOTE: For a README file with embedded images instead of imgur links, look ***HERE PLACEHOLDER ***. The below links are for *non-optimized* gifs.
+# NOTE: For a README file with embedded images instead of imgur links, look [HERE](https://github.com/jakemingolla/SphereShaders/blob/master/README.md). The below links are for *non-optimized* gifs.
 
 [yNoise](https://raw.githubusercontent.com/jakemingolla/SphereShaders/master/public/base/ynoise.gif)
 The above gif demonstrates the effect of changing the noise with a fixed interval. The pseudo-sphere begins to arc in a sinusoidal pattern in relation to the Y axis.
