@@ -12,8 +12,23 @@
 
 ### About
 
+This project creates a sandbox for pseudo-sphere rendering with support for sinusoidal transformations, vertex spacing, changing color palettes, and level of detail adjustments. There are also modes to enable "explosion" mode in which the pseudo-sphere is slowly expanded/contracted as well as "pointlight" mode in which the mouse cursor overrides the direct lighting.
+
+The sinusoidal transformations are implemented in the sphere-wave.geom geometry shader and take in uniform values set by the sliders. For each of the X, Y and Z axes, the interval and noise control the sine transformation. A shorter interval reduces the period of the wave and creates more concentrated waves whereas a longer wave creates a more gradual rate of change. The noise value controls the amplitude of the wave as a scalar.
+
+The color palette controlling sliders dictate the levels of red, green, and blue of the GLModel holding the vertex list. This RGB tint is passed in to the basic-lighting.frag fragment shader.
+
+The detail and radius values control the level of detail of the sphere. Changing these causes the sphere to 
+
+On my setup of a non-overclocked Intel i5-4690k and Nvidia GTX 980 the rendering can maintain 60 FPS throughout the simulation. Rapidly changing the level of detail slider at the maximum radius causes to a slight dip to ~40 FPS due to the sudden poor cache performance due to the vertex and normal lists being dumped.
+
+For a full understanding of how the transformations are applied, the file data/sphere-wave.geom implements all aspects of both the sinusoidal transformations as well as the explode and spacing values.
+
 
 ### Screenshots
+
+# NOTE: These .gif files are quite large (about 5-10 mb each) and may require ~15 seconds to finish loading on a slow connection. For a README without embedded images and only links, look ***HERE PLACEHOLDER ***.
+
 ![yNoise](http://i.imgur.com/asTyeW5.gif)
 The above gif demonstrates the effect of changing the noise with a fixed interval. The pseudo-sphere begins to arc in a sinusoidal pattern in relation to the Y axis.
 
@@ -30,11 +45,11 @@ I chose a minimum of 10 levels in order to avoid degenerate cases with extreme l
 
 Also note the presence of compression artifacts in the center of the image - the color gradient is far smoother but the screen capture program I used introduced lots of compression.
 
-![detailThenSpacing](http://i.imgur.com/dYC1lOJ.gif)
+>![detailThenSpacing](http://i.imgur.com/dYC1lOJ.gif)
 In the above gif, first the detail is increased from minimum to maximum value, then the spacing is reduced to the lowest possible setting. This shows the progression from a low poly pseudo-sphere to an extremely smooth rendering. Note that the noise and interval settings remained constant throughout this gif to show these settings in isolation.
 
 ![pointLight](http://i.imgur.com/pGbP2RD.gif)
-This gif shows the effect of the point light mode. The lighting follows the mouse cursor across the pseudo-shpere to provide a smooth lighting gradient. Note that this is handled entirely through the basic-lighting.vert shader.
+This gif shows the effect of the point light mode. The lighting follows the mouse cursor across the pseudo-shpere to provide a smooth lighting gradient. Note that this is handled entirely through the basic-lighting.frag shader.
 
 ![ripple](http://i.imgur.com/ZFqygkQ.gif)
 This gif shows a slowly rippling pseudo-sphere with lots of Z noise and a short Z interval with relatively little interaction in the X and Y spaces.
