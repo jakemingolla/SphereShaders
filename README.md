@@ -27,7 +27,7 @@ For a full understanding of how the transformations are applied, the file data/s
 
 ### Screenshots
 
-# NOTE: These .gif files are quite large (about 5 mb each) and may require ~15 seconds to finish loading on a slow connection. For a README without embedded images and only links, look [HERE](https://github.com/jakemingolla/SphereShaders/blob/master/README_NO_EMBED.md)
+# NOTE: These .gif files are quite large (about 5 mb each) and may require ~15 seconds to finish loading on a slow connection. For a README without embedded images and only links, look [HERE](https://github.com/jakemingolla/SphereShaders/blob/master/README_NO_EMBED.md). The gifs below are *optimized* and *embedded*.
 
 ![yNoise](https://raw.githubusercontent.com/jakemingolla/SphereShaders/master/public/optimized/ynoise.gif)
 The above gif demonstrates the effect of changing the noise with a fixed interval. The pseudo-sphere begins to arc in a sinusoidal pattern in relation to the Y axis.
@@ -45,7 +45,7 @@ I chose a minimum of 10 levels in order to avoid degenerate cases with extreme l
 
 Also note the presence of compression artifacts in the center of the image - the color gradient is far smoother but the screen capture program I used introduced lots of compression.
 
->![detailThenSpacing](https://raw.githubusercontent.com/jakemingolla/SphereShaders/master/public/optimized/detailThenSmooth.gif)
+![detailThenSpacing](https://raw.githubusercontent.com/jakemingolla/SphereShaders/master/public/optimized/detailThenSmooth.gif)
 In the above gif, first the detail is increased from minimum to maximum value, then the spacing is reduced to the lowest possible setting. This shows the progression from a low poly pseudo-sphere to an extremely smooth rendering. Note that the noise and interval settings remained constant throughout this gif to show these settings in isolation.
 
 ![pointLight](https://raw.githubusercontent.com/jakemingolla/SphereShaders/master/public/optimized/pointlight.gif)
