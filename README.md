@@ -27,31 +27,31 @@ For a full understanding of how the transformations are applied, the file data/s
 
 ### Screenshots
 
-# NOTE: These .gif files are quite large (about 5-10 mb each) and may require ~15 seconds to finish loading on a slow connection. For a README without embedded images and only links, look ***HERE PLACEHOLDER ***.
+# NOTE: These .gif files are quite large (about 5 mb each) and may require ~15 seconds to finish loading on a slow connection. For a README without embedded images and only links, look ***HERE PLACEHOLDER ***.
 
-![yNoise](http://i.imgur.com/asTyeW5.gif)
+![yNoise](https://raw.githubusercontent.com/jakemingolla/SphereShaders/master/public/optimized/ynoise.gif)
 The above gif demonstrates the effect of changing the noise with a fixed interval. The pseudo-sphere begins to arc in a sinusoidal pattern in relation to the Y axis.
 
-![zNoiseAndSpacing](http://i.imgur.com/YpLKrvq.gif)
+![zNoiseAndSpacing](https://raw.githubusercontent.com/jakemingolla/SphereShaders/master/public/optimized/spacingThenZNoise.gif)
 In the above gif, the spacing of the pseudo-sphere is increased in order to show how the geometry shader handles individual faces through quads. Then, the Z noise is increased to show the rippling effect with high spacing.
 
-![explode](http://i.imgur.com/Mkrv0Fj.gif)
-This gif first shows the effect of the explode parameter, as a sphere with no spacing increases outwards towards screen. Then the point light is enabled and it follows the cursor (Note: cursor not shown in this gif)
+![explode](https://raw.githubusercontent.com/jakemingolla/SphereShaders/master/public/optimized/explode.gif)
+This gif first shows the effect of the explode parameter as a sphere with no spacing increases outwards towards screen. Then the point light is enabled and it follows the cursor (Note: cursor not shown in this gif)
 
-![detail](http://i.imgur.com/3S8NciM.gif)
+![detail](https://raw.githubusercontent.com/jakemingolla/SphereShaders/master/public/optimized/detail.gif)
 The above gif shows the effect of increasing the detail on a pseudo-shpere with a relatively pronounced X noise and interval. The detail parameter controls how many levels of triangle strips are created during sphere creation with 10 being the default minimum and 500 being the default maximum.
 
 I chose a minimum of 10 levels in order to avoid degenerate cases with extreme levels of noise and intervals with few faces to make them up, but this can be lowered in the source code. My setup could not handle a detail parameter over 760, so I moved the detail value down to compensate.
 
 Also note the presence of compression artifacts in the center of the image - the color gradient is far smoother but the screen capture program I used introduced lots of compression.
 
->![detailThenSpacing](http://i.imgur.com/dYC1lOJ.gif)
+>![detailThenSpacing](https://raw.githubusercontent.com/jakemingolla/SphereShaders/master/public/optimized/detailThenSmooth.gif)
 In the above gif, first the detail is increased from minimum to maximum value, then the spacing is reduced to the lowest possible setting. This shows the progression from a low poly pseudo-sphere to an extremely smooth rendering. Note that the noise and interval settings remained constant throughout this gif to show these settings in isolation.
 
-![pointLight](http://i.imgur.com/pGbP2RD.gif)
+![pointLight](https://raw.githubusercontent.com/jakemingolla/SphereShaders/master/public/optimized/pointlight.gif)
 This gif shows the effect of the point light mode. The lighting follows the mouse cursor across the pseudo-shpere to provide a smooth lighting gradient. Note that this is handled entirely through the basic-lighting.frag shader.
 
-![ripple](http://i.imgur.com/ZFqygkQ.gif)
+![ripple](https://raw.githubusercontent.com/jakemingolla/SphereShaders/master/public/optimized/back.gif)
 This gif shows a slowly rippling pseudo-sphere with lots of Z noise and a short Z interval with relatively little interaction in the X and Y spaces.
 
 
