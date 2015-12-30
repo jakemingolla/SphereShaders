@@ -19,7 +19,7 @@ The sinusoidal transformations are implemented in the sphere-wave.geom geometry 
 
 The color palette controlling sliders dictate the levels of red, green, and blue of the GLModel holding the vertex list. This RGB tint is passed in to the basic-lighting.frag fragment shader.
 
-The detail and radius values control the level of detail of the sphere. Changing these causes the sphere to 
+The detail and radius values control the level of detail of the sphere. Changing these causes the sphere to gain or lose precision or size. Level of detail is the most taxing effect, as it requires for a full recalculation of the vertex and normal lists.
 
 On my setup of a non-overclocked Intel i5-4690k and Nvidia GTX 980 the rendering can maintain 60 FPS throughout the simulation. Rapidly changing the level of detail slider at the maximum radius causes to a slight dip to ~40 FPS due to the sudden poor cache performance due to the vertex and normal lists being dumped.
 
