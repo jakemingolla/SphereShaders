@@ -1,3 +1,8 @@
+/*
+ * Author: Nacho Cossio
+ * Link: http://www.nachocossio.com/geometry-shaders-in-processing/
+ */
+
 float SINCOS_PRECISION = 0.5;
 int SINCOS_LENGTH = int(360.0 / SINCOS_PRECISION);  
 

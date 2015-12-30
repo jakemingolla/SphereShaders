@@ -69,3 +69,4 @@ This gif shows a slowly rippling pseudo-sphere with lots of Z noise and a short 
 
 ### Notes
 - Screen recordings where done through [byzanz-record](http://manpages.ubuntu.com/manpages/wily/man1/byzanz-record.1.html). I would highly recommend it to capture .gif files from a display.
+- Sphere GLModel code taken from [Nacho Cossio](http://www.nachocossio.com/geometry-shaders-in-processing/)
